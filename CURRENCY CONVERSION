@@ -1,0 +1,93 @@
+include <stdio.h>
+
+
+int main()
+
+	{
+
+   #define POUND 0.70
+   #define KRONE 7.43
+   #define YEN 127
+
+
+
+   int menu_choice;
+   float local_amount, remote_amount;
+
+   /* Display Menu System */
+   printf("1. Britain\n");
+   printf("2. Denmark\n");
+   printf("3. Japan\n");
+   printf("4. USA\n");
+   printf("5. Exit Program\n\n");
+
+   /* Ask user for there choice */
+   /* And Asign the choice to varabial manu_choice, which is of int data type */
+
+   printf("Please Enter Your Country Selection From The Menu: \t");
+   scanf("%d",&menu_choice);
+
+   if (menu_choice == 1)
+   {
+      printf("\n\nDo you wish to convert from:\n\n");
+      printf("1. Euro to Pound(Sterling)\n");
+      printf("2. Pound(Sterling) to Euro\n\n");
+      printf("Please Enter Your Choice From The Menu: \t");
+      scanf("%d",&menu_choice);
+
+      if (menu_choice == 1)
+      {
+      	printf("\n\nEuro to Pound(Sterling):\n\n");
+
+         printf("Please Enter Euro Amount to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount * POUND;
+
+         printf("\n%f Euro is equal to %f Pound",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+
+      if (menu_choice == 2)
+      {
+
+      	printf("\n\nPound(Sterling) to Euro:\n\n");
+
+         printf("Please Enter Pound(Sterling) Amount to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount / POUND;
+
+         printf("\n%f Pound is equal to %f Euro",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+
+   }
+
+   if (menu_choice == 2)
+   {
+   	printf("2. Denmark\n");
+   }
+
+   if (menu_choice == 3)
+   {
+   	printf("3. Japan\n");
+   }
+
+   if (menu_choice == 4)
+   {
+   	printf("4. USA\n");
+   }
+
+   if (menu_choice == 5)
+   {
+   	printf("5. Thank You and Good Bye!\n");
+   }
+
+   return 0;
+
+   }
